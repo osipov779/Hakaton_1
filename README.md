@@ -57,17 +57,7 @@ python demo.py -p <PATH_TO_CONFIG>
 - Алексей: ML инженер 
 
 
-## Citation
-You can cite the paper using the following BibTeX entry:
-
-    @inproceedings{kapitanov2023slovo,
-        title={Slovo: Russian Sign Language Dataset},
-        author={Kapitanov, Alexander and Karina, Kvanchiani and Nagaev, Alexander and Elizaveta, Petrova},
-        booktitle={International Conference on Computer Vision Systems},
-        pages={63--73},
-        year={2023},
-        organization={Springer}
-    }
+## 
 
 ## Links
 - [arXiv](https://arxiv.org/abs/2305.14527)
@@ -78,7 +68,7 @@ You can cite the paper using the following BibTeX entry:
 - [Gitlab](https://gitlab.aicloud.sbercloud.ru/rndcv/slovo)
 - [Paperswithcode](https://paperswithcode.com/paper/slovo-russian-sign-language-dataset)
 
-## License
+## Лицензии
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a variant of <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
 Please see the specific [license](https://github.com/hukenovs/slovo/blob/master/license/en_us.pdf).
