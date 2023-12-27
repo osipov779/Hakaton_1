@@ -7,11 +7,7 @@ Slovo — набор данных русского языка жестов. На
 Файл аннотаций прост в использовании и содержит несколько полезных столбцов, см. annotations.csvфайл:
 
 ![image](https://github.com/osipov779/Hakaton_1/assets/151464254/663377c6-be86-48f6-86bd-804b69f8eec6)
-|    | attachment_id | user_id | width | height | length |  text  | train   | begin | end |
-|---:|:--------------|:--------|------:|-------:|-------:|-------:|:--------|:------|:----|
-|  0 | de81cc1c-...  | 1b...   |  1440 |   1920 |     14 | привет | True    | 30    | 45  |
-|  1 | 3c0cec5a-...  | 64...   |  1440 |   1920 |     32 |   утро | False   | 43    | 66  |
-|  2 | d17ca986-...  | cf...   |  1920 |   1080 |     44 |  улица | False   | 12    | 31  |
+
 где:
 attachment_id- имя видеофайла
 user_id- уникальный анонимизированный идентификатор пользователя
@@ -27,12 +23,6 @@ end- конец жеста (для исходного набора данных)
 ## Модели
 В качестве предварительно обученных моделей мы выбрали MViTv2-small-32-2 (ONNX [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/mvit/onnx/mvit32-2.onnx), TorchScript [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/mvit/pt/mvit32-2.pt))
 
-
-
-We provide some pre-trained models as the baseline for Russian sign language recognition. 
-We tested models with frames number from [16, 32, 48], and **the best for each are below**.
-The first number in the model name is frames number and the second is frame interval. 
-
 ## SignFlow models
 
 | Model Name | Desc                                                                                                                | ONNX                                                                                                    | Params |
@@ -41,7 +31,7 @@ The first number in the model name is frames number and the second is frame inte
 | SignFlow-R | Pre-trained on **~50000** samples, has **267** classes, tested with GigaChat (as-is and context-based modes)        | [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/SignFlow-R.onnx) | 37M    |
 
 
-## Demo
+## Демо
 ```console
 usage: demo.py [-h] -p CONFIG [--mp] [-v] [-l LENGTH]
 
