@@ -266,7 +266,7 @@ class Runner:
 def parse_arguments(params: Optional[Tuple] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Demo full frame classification...")
 
-    parser.add_argument("-p", "--config", required=True, type=str, help="Path to config")
+    #parser.add_argument("-p", "--config", required=True, type=str, help="Path to config")
     parser.add_argument("--mp", required=False, action="store_true", help="Enable multiprocessing")
     parser.add_argument("-v", "--verbose", required=False, action="store_true", help="Enable logging")
     parser.add_argument("-l", "--length", required=False, type=int, default=4, help="Deque length for predictions")
