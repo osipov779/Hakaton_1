@@ -7,7 +7,11 @@ Slovo — набор данных русского языка жестов. На
 Файл аннотаций прост в использовании и содержит несколько полезных столбцов, см. annotations.csvфайл:
 
 ![image](https://github.com/osipov779/Hakaton_1/assets/151464254/663377c6-be86-48f6-86bd-804b69f8eec6)
-
+|    | attachment_id | user_id | width | height | length |  text  | train   | begin | end |
+|---:|:--------------|:--------|------:|-------:|-------:|-------:|:--------|:------|:----|
+|  0 | de81cc1c-...  | 1b...   |  1440 |   1920 |     14 | привет | True    | 30    | 45  |
+|  1 | 3c0cec5a-...  | 64...   |  1440 |   1920 |     32 |   утро | False   | 43    | 66  |
+|  2 | d17ca986-...  | cf...   |  1920 |   1080 |     44 |  улица | False   | 12    | 31  |
 где:
 attachment_id- имя видеофайла
 user_id- уникальный анонимизированный идентификатор пользователя
@@ -20,8 +24,70 @@ begin- начало жеста (для исходного набора данн�
 end- конец жеста (для исходного набора данных)
 Для удобства подготовлена сжатая версия датасета, в которой все видео обрабатываются с минимальной стороны min_side = 360. Ссылка для скачивания — slovo360p .  Обрезанные видео аннотируются с помощью MediaPipe и указываем ключевые точки руки в этом файле аннотаций .
 
-Модели
-В качестве предварительно обученных моделей мы выбрали MViTv2-small-32-2
+## Модели
+В качестве предварительно обученных моделей мы выбрали MViTv2-small-32-2 (ONNX [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/mvit/onnx/mvit32-2.onnx), TorchScript [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/mvit/pt/mvit32-2.pt))
 
 
-Vjhjhgjhgjhg
+
+We provide some pre-trained models as the baseline for Russian sign language recognition. 
+We tested models with frames number from [16, 32, 48], and **the best for each are below**.
+The first number in the model name is frames number and the second is frame interval. 
+
+## SignFlow models
+
+| Model Name | Desc                                                                                                                | ONNX                                                                                                    | Params |
+|------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|--------|
+| SignFlow-A | **63.3 Top-1** Acc on  [WLASL-2000](https://paperswithcode.com/sota/sign-language-recognition-on-wlasl-2000) (SOTA) | [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/SignFlow-A.onnx) | 36M    |
+| SignFlow-R | Pre-trained on **~50000** samples, has **267** classes, tested with GigaChat (as-is and context-based modes)        | [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/SignFlow-R.onnx) | 37M    |
+
+
+## Demo
+```console
+usage: demo.py [-h] -p CONFIG [--mp] [-v] [-l LENGTH]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p CONFIG, --config CONFIG
+                        Path to config
+  --mp                  Enable multiprocessing
+  -v, --verbose         Enable logging
+  -l LENGTH, --length LENGTH
+                        Deque length for predictions
+
+
+python demo.py -p <PATH_TO_CONFIG>
+```
+
+![demo](images/demo.gif)
+
+## Authors and Credits
+- [Kapitanov Alexander](https://www.linkedin.com/in/hukenovs)
+- [Kvanchiani Karina](https://www.linkedin.com/in/kvanchiani)
+- [Nagaev Alexander](https://www.linkedin.com/in/nagadit/)
+- [Petrova Elizaveta](https://www.linkedin.com/in/elizaveta-petrova-248135263/)
+
+## Citation
+You can cite the paper using the following BibTeX entry:
+
+    @inproceedings{kapitanov2023slovo,
+        title={Slovo: Russian Sign Language Dataset},
+        author={Kapitanov, Alexander and Karina, Kvanchiani and Nagaev, Alexander and Elizaveta, Petrova},
+        booktitle={International Conference on Computer Vision Systems},
+        pages={63--73},
+        year={2023},
+        organization={Springer}
+    }
+
+## Links
+- [arXiv](https://arxiv.org/abs/2305.14527)
+- [Kaggle](https://www.kaggle.com/datasets/kapitanov/slovo)
+- [Habr](https://habr.com/ru/companies/sberdevices/articles/737018/)
+- [Medium](https://medium.com/@nagadit/slovo-russian-sign-language-dataset-a8a8bd6fa17d)
+- [Github](https://github.com/hukenovs/slovo)
+- [Gitlab](https://gitlab.aicloud.sbercloud.ru/rndcv/slovo)
+- [Paperswithcode](https://paperswithcode.com/paper/slovo-russian-sign-language-dataset)
+
+## License
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a variant of <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+Please see the specific [license](https://github.com/hukenovs/slovo/blob/master/license/en_us.pdf).
