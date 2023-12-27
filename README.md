@@ -29,6 +29,8 @@ end- конец жеста (для исходного набора данных)
 ONNX [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/mvit/onnx/mvit32-2.onnx)\
 TorchScript [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/mvit/pt/mvit32-2.pt)
 
+Пример обучения модели приводим в файле Hakaton.ipynb()
+
 ## Демо
 ```console
 usage: demo.py [-h] -p CONFIG [--mp] [-v] [-l LENGTH]
