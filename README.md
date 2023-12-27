@@ -59,7 +59,7 @@ python demo.py -p <PATH_TO_CONFIG>
 
 ## 
 
-## Links
+## Ссылки
 - [arXiv](https://arxiv.org/abs/2305.14527)
 - [Kaggle](https://www.kaggle.com/datasets/kapitanov/slovo)
 - [Habr](https://habr.com/ru/companies/sberdevices/articles/737018/)
