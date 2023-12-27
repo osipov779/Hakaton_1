@@ -24,18 +24,10 @@ end- конец жеста (для исходного набора данных)
 Для удобства подготовлена сжатая версия датасета, в которой все видео обрабатываются с минимальной стороны min_side = 360. Ссылка для скачивания — [slovo360p](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/slovo_full360.zip) .  Обрезанные видео аннотируются с помощью MediaPipe и указываем ключевые точки руки в этом файле аннотаций .
 
 ## Модели
-В качестве предварительно обученных моделей мы выбрали MViTv2-small-32-2
+В качестве предварительно обученной модели мы выбрали MViTv2-small-32-2
 
 ONNX [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/mvit/onnx/mvit32-2.onnx)\
 TorchScript [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/mvit/pt/mvit32-2.pt)
-
-## Модели SignFlow
-
-| Model Name | Desc                                                                                                                | ONNX                                                                                                    | Params |
-|------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|--------|
-| SignFlow-A | **63.3 Top-1** Acc on  [WLASL-2000](https://paperswithcode.com/sota/sign-language-recognition-on-wlasl-2000) (SOTA) | [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/SignFlow-A.onnx) | 36M    |
-| SignFlow-R | Pre-trained on **~50000** samples, has **267** classes, tested with GigaChat (as-is and context-based modes)        | [weights](https://n-ws-620xz-pd11.s3pd11.sbercloud.ru/b-ws-620xz-pd11-jux/slovo/models/SignFlow-R.onnx) | 37M    |
-
 
 ## Демо
 ```console
