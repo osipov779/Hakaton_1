@@ -5,12 +5,7 @@ Slovo — набор данных русского языка жестов. На
 Для получения дополнительной информации см. https://github.com/hukenovs/slovo
 
 Файл аннотаций прост в использовании и содержит несколько полезных столбцов, см. annotations.csvфайл:
-	attachment_id	text	user_id	height	width	length	train	begin	end
-0	44e8d2a0-7e01-450b-90b0-beb7400d2c1e	Ё	185bd3a81d9d618518d10abebf0d17a8	1920	1080	156.0	True	36	112
-1	df5b08f0-41d1-4572-889c-8b893e71069b	А	185bd3a81d9d618518d10abebf0d17a8	1920	1080	150.0	True	36	76
-2	17f53df4-c467-4aff-9f48-20687b63d49a	Р	185bd3a81d9d618518d10abebf0d17a8	1920	1080	133.0	True	40	97
-3	e3add916-c708-4339-ad98-7e2740be29e9	Е	185bd3a81d9d618518d10abebf0d17a8	1920	1080	144.0	True	43	107
-4	bd7272ed-1850-48f1-a2a8-c8fed523dc37	Ч	185bd3a81d9d618518d10abebf0d17a8	1920	1080	96.0	True	20	70
+
 ![image](https://github.com/osipov779/Hakaton_1/assets/151464254/663377c6-be86-48f6-86bd-804b69f8eec6)
 
 
