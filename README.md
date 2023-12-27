@@ -50,11 +50,14 @@ python demo.py -p <PATH_TO_CONFIG>
 
 ![demo](images/demo.gif)
 
-## Authors and Credits
-- [Kapitanov Alexander](https://www.linkedin.com/in/hukenovs)
-- [Kvanchiani Karina](https://www.linkedin.com/in/kvanchiani)
-- [Nagaev Alexander](https://www.linkedin.com/in/nagadit/)
-- [Petrova Elizaveta](https://www.linkedin.com/in/elizaveta-petrova-248135263/)
+## Авторы
+- Рушана: Тимлид
+- Дмитрий: Клинический эксперт, консультант по работе поликлиники, бизнес-аналитик
+- Виктория: Data инженер 
+- Екатерина: Data инженер
+- Денис: ML инженер
+- Алексей: ML инженер 
+
 
 ## Citation
 You can cite the paper using the following BibTeX entry:
